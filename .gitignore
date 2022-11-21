@@ -1,6 +1,5 @@
 node_modules
 dist/
-data/
 env/
-package-lock.json
 logs.log
+pnpm-lock.yaml
