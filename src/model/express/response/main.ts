@@ -1,18 +1,26 @@
-interface IResponse {
-  id: number;
-  title: string;
-  location: string;
-  organization: string;
-  author: string;
-  timestamp: string;
-  url: string;
-  body: string;
+import express from "express";
+
+interface IServerResponse {
+  success: boolean;
+  message: string;
 }
 
-interface IData {
-  title: string;
-  url: string;
-  location: string;
-}
+export type IResponse = express.Response<
+  IServerResponse & {
+    data?: {
+      location: string;
+      title: string;
+      url: string;
+    }[];
+  }
+>;
 
-export { IResponse, IData };
+type IRegisterResponse = express.Response<
+  IServerResponse & {
+    data?: {
+      username: string;
+      email: string;
+      token: string;
+    };
+  }
+>;

@@ -1,5 +1,3 @@
 import express from "express";
 
-interface IRequest extends express.Request {}
-
-export { IRequest };
+export interface IRequest extends express.Request {}
