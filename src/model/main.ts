@@ -2,7 +2,7 @@ export interface IData {
   id?: number;
   title: string;
   location: string;
-  organization?: string;
+  organization?: { id: number; name: string };
   author?: string;
   timestamp?: string;
   url: string;
