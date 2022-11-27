@@ -1,6 +1,8 @@
 import { Actor } from "apify";
 import { PuppeteerCrawler } from "crawlee";
 
+const linkedInUser = {email: 'email', password: "password"}
+
 await Actor.init();
 
 // Create an instance of the PuppeteerCrawler class - a crawler
@@ -9,7 +11,7 @@ const crawler = new PuppeteerCrawler({
   // Here you can set options that are passed to the launchPuppeteer() function.
   launchContext: {
     launchOptions: {
-      headless: true
+      headless: false,
       // Other Puppeteer options
     }
   },
@@ -25,14 +27,24 @@ const crawler = new PuppeteerCrawler({
   // - page: Puppeteer's Page object (see https://pptr.dev/#show=api-class-page)
   async requestHandler({ request, page, enqueueLinks }) {
     console.log(`Processing ${request.url}...`);
+    
+    await page.goto('https://www.linkedin.com/login', { waitUntil: "networkidle0" });
+    
+    await page.type('#username', linkedInUser.email)
+    
+    await page.type('#password', linkedInUser.password)
+    
+    await page.click('.btn__primary--large.from__button--floating')
+    
+    await page.waitForNavigation()
+    
+    await page.goto(request.url, { waitUntil: "networkidle0" });
 
-    const t = await page.goto(request.url, { waitUntil: "networkidle0" });
+    await page.type('#msg-overlay-list-bubble-search__search-typeahead-input', 'asd')
+    
+    await page.click('jobs-apply-button.artdeco-button.artdeco-button--3.artdeco-button--primary.ember-view')
 
-    console.log(t);
-
-    const getPTag = await page.$selector("p");
-
-    console.log(getPTag);
+    await page.waitForNavigation()
   },
 
   // This function is called if the page processing failed more than maxRequestRetries+1 times.
