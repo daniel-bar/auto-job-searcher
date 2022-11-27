@@ -28,7 +28,7 @@ const main = async (req: IRequest, res: IResponse) => {
         /senior|sr|bi|noc|qa|quality automation|assurance|tech lead|team lead|embedded|tech leader|lead|staff|business intelligence|devops|researcher|algorithm|android|principal|automation|go|system|linux|head|c#|.net|machine/;
 
       const unwantedLocations =
-        /rosh haayin|rehovot|haifa|lod|yokneam ilit|yavne|yoqneam illit|modiin-maccabim-reut|jerusalem|beer-sheba|beer sheba|beer sheva|beer-sheva|kiryat malachi|dimona|netanya|north|nes ziona|kiryat gat/;
+        /rosh haayin|rehovot|haifa|lod|rishon lezion|yokneam ilit|yavne|yoqneam illit|modiin-maccabim-reut|jerusalem|beer-sheba|beer sheba|beer sheva|beer-sheva|kiryat malachi|dimona|netanya|north|nes ziona|kiryat gat/;
 
       const isUnwantedLocationIncluded = unwantedLocations.test(
         item.location.toLowerCase()
@@ -117,7 +117,7 @@ const main = async (req: IRequest, res: IResponse) => {
       .map((item) => {
         return `Title: ${item.title}, \n
 Location: ${item.location}, \n
-Company name: ${item.url}, \n
+URL: ${item.url}, \n
 `;
       })
       .join("\n");
