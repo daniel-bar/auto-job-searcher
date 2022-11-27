@@ -1,0 +1,53 @@
+{
+  "requestsFinished": 0,
+  "requestsFailed": 1,
+  "requestsRetries": 1,
+  "requestsFailedPerMinute": 2,
+  "requestsFinishedPerMinute": 0,
+  "requestMinDurationMillis": null,
+  "requestMaxDurationMillis": 0,
+  "requestTotalFailedDurationMillis": 3619,
+  "requestTotalFinishedDurationMillis": 0,
+  "crawlerStartedAt": "2022-11-27T19:02:21.123Z",
+  "crawlerFinishedAt": null,
+  "statsPersistedAt": "2022-11-27T19:02:50.157Z",
+  "crawlerRuntimeMillis": 29332,
+  "crawlerLastStartTimestamp": 1669575740825,
+  "requestRetryHistogram": [
+    null,
+    null,
+    null,
+    1
+  ],
+  "statsId": 0,
+  "requestAvgFailedDurationMillis": 3619,
+  "requestAvgFinishedDurationMillis": null,
+  "requestTotalDurationMillis": 3619,
+  "requestsTotal": 1,
+  "requestsWithStatusCode": {
+    "200": 3,
+    "400": 1
+  },
+  "errors": {
+    "file:///C:/Users/Daniel%20Bar/Desktop/Code/auto-job-searcher/src/controller/apify.js:33:32": {
+      "missing error code": {
+        "TypeError": {
+          "page.$selector is not a function": {
+            "count": 1
+          }
+        }
+      }
+    }
+  },
+  "retryErrors": {
+    "file:///C:/Users/Daniel%20Bar/Desktop/Code/auto-job-searcher/src/controller/apify.js:33:32": {
+      "missing error code": {
+        "TypeError": {
+          "page.$selector is not a function": {
+            "count": 3
+          }
+        }
+      }
+    }
+  }
+}
