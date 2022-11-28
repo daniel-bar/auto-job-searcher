@@ -1,9 +1,9 @@
 {
 	"id": "RogeokWo6smqgvH",
-	"json": "{\"id\":\"RogeokWo6smqgvH\",\"url\":\"https://www.linkedin.com/jobs/view/3377757004/?originalSubdomain=il\",\"uniqueKey\":\"https://www.linkedin.com/jobs/view/3377757004?originalSubdomain=il\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{}}",
+	"json": "{\"id\":\"RogeokWo6smqgvH\",\"url\":\"https://www.linkedin.com/jobs/view/3377757004/?originalSubdomain=il\",\"loadedUrl\":\"https://www.linkedin.com/jobs/view/3377757004/?originalSubdomain=il\",\"uniqueKey\":\"https://www.linkedin.com/jobs/view/3377757004?originalSubdomain=il\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":1,\"errorMessages\":[\"Error: No element found for selector: .app-aware-link\\n    at assert (/Users/harelk1015/תכנות/JobFinder/node_modules/.pnpm/puppeteer-core@19.3.0/node_modules/puppeteer-core/lib/cjs/puppeteer/util/assert.js:28:15)\\n    at IsolatedWorld.click (/Users/harelk1015/תכנות/JobFinder/node_modules/.pnpm/puppeteer-core@19.3.0/node_modules/puppeteer-core/lib/cjs/puppeteer/common/IsolatedWorld.js:221:32)\\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\\n    at async PuppeteerCrawler.requestHandler [as userProvidedRequestHandler] (file:///Users/harelk1015/%D7%AA%D7%9B%D7%A0%D7%95%D7%AA/JobFinder/src/controller/apify.js:45:50)\\n    at async wrap (/Users/harelk1015/תכנות/JobFinder/node_modules/.pnpm/@apify+timeout@0.3.0/node_modules/@apify/timeout/index.js:52:21)\"],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":5}}}",
 	"method": "GET",
-	"orderNo": 1669585267202,
-	"retryCount": 0,
+	"orderNo": 1669652074119,
+	"retryCount": 1,
 	"uniqueKey": "https://www.linkedin.com/jobs/view/3377757004?originalSubdomain=il",
 	"url": "https://www.linkedin.com/jobs/view/3377757004/?originalSubdomain=il"
 }
