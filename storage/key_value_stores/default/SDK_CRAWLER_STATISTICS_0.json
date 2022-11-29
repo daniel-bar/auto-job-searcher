@@ -6,13 +6,13 @@
   "requestsFinishedPerMinute": 0,
   "requestMinDurationMillis": null,
   "requestMaxDurationMillis": 0,
-  "requestTotalFailedDurationMillis": 3619,
+  "requestTotalFailedDurationMillis": 1467,
   "requestTotalFinishedDurationMillis": 0,
-  "crawlerStartedAt": "2022-11-27T19:02:21.123Z",
+  "crawlerStartedAt": "2022-11-27T19:12:36.304Z",
   "crawlerFinishedAt": null,
-  "statsPersistedAt": "2022-11-27T19:02:50.157Z",
-  "crawlerRuntimeMillis": 29332,
-  "crawlerLastStartTimestamp": 1669575740825,
+  "statsPersistedAt": "2022-11-27T19:13:03.653Z",
+  "crawlerRuntimeMillis": 27612,
+  "crawlerLastStartTimestamp": 1669576356041,
   "requestRetryHistogram": [
     null,
     null,
@@ -20,19 +20,18 @@
     1
   ],
   "statsId": 0,
-  "requestAvgFailedDurationMillis": 3619,
+  "requestAvgFailedDurationMillis": 1467,
   "requestAvgFinishedDurationMillis": null,
-  "requestTotalDurationMillis": 3619,
+  "requestTotalDurationMillis": 1467,
   "requestsTotal": 1,
   "requestsWithStatusCode": {
-    "200": 3,
-    "400": 1
+    "200": 3
   },
   "errors": {
-    "file:///C:/Users/Daniel%20Bar/Desktop/Code/auto-job-searcher/src/controller/apify.js:33:32": {
+    "file:///C:/Users/Daniel%20Bar/Desktop/Code/auto-job-searcher/src/controller/apify.js:32:19": {
       "missing error code": {
-        "TypeError": {
-          "page.$selector is not a function": {
+        "Error": {
+          "Execution context was destroyed, most likely because of a navigation.": {
             "count": 1
           }
         }
@@ -40,11 +39,20 @@
     }
   },
   "retryErrors": {
-    "file:///C:/Users/Daniel%20Bar/Desktop/Code/auto-job-searcher/src/controller/apify.js:33:32": {
+    "file:///C:/Users/Daniel%20Bar/Desktop/Code/auto-job-searcher/src/controller/apify.js:32:19": {
       "missing error code": {
-        "TypeError": {
-          "page.$selector is not a function": {
-            "count": 3
+        "Error": {
+          "Error: failed to find element matching selector \"div.application-outlet > div.authentication-outlet > div > div.job-view-layout.jobs-details > div.grid > div > div:nth-child(2) > div > div.hirer-card__container > div.hirer-card__hirer-information.pt3.pb3.t-12.t-black--light > a\"": {
+            "count": 2
+          }
+        }
+      }
+    },
+    "C:\\Users\\Daniel Bar\\Desktop\\Code\\auto-job-searcher\\node_modules\\.pnpm\\puppeteer-core@19.3.0\\node_modules\\puppeteer-core\\lib\\cjs\\puppeteer\\common\\Frame.js:236:23": {
+      "missing error code": {
+        "Error": {
+          "net::ERR_HTTP_RESPONSE_CODE_FAILURE at https://www.linkedin.com/jobs/view/3377757004/?originalSubdomain=il": {
+            "count": 1
           }
         }
       }

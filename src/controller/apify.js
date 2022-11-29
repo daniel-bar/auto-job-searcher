@@ -9,7 +9,7 @@ const crawler = new PuppeteerCrawler({
   // Here you can set options that are passed to the launchPuppeteer() function.
   launchContext: {
     launchOptions: {
-      headless: true
+      headless: false
       // Other Puppeteer options
     }
   },
@@ -26,13 +26,12 @@ const crawler = new PuppeteerCrawler({
   async requestHandler({ request, page, enqueueLinks }) {
     console.log(`Processing ${request.url}...`);
 
-    const t = await page.goto(request.url, { waitUntil: "networkidle0" });
+    const selector =
+      "div.application-outlet > div.authentication-outlet > div > div.job-view-layout.jobs-details > div.grid > div > div:nth-child(2) > div > div.hirer-card__container > div.hirer-card__hirer-information.pt3.pb3.t-12.t-black--light > a";
 
-    console.log(t);
+    const links = await page.$eval(selector, (el) => el.href);
 
-    const getPTag = await page.$selector("p");
-
-    console.log(getPTag);
+    console.log(links);
   },
 
   // This function is called if the page processing failed more than maxRequestRetries+1 times.

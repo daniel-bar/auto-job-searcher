@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "app for searching jobs",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "node ./dist/server.js",
     "dev": "dotenv -e ./env/backend.env nodemon ./src/server.ts",
